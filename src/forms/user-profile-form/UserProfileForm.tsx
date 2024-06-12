@@ -92,7 +92,7 @@ const UserProfileForm = ({
                 <div className="flex flex-col md:flex-row gap-4">
                     <FormField
                         control={form.control}
-                        name="addressLine1"
+                        name="addressLine"
                         render={({ field }) => (
                             <FormItem className="flex-1">
                                 <FormLabel>Address Line</FormLabel>
