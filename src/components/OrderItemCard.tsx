@@ -4,10 +4,11 @@ import { useUpdateMyRestaurantOrder } from "@/api/MyRestaurantApi";
 import { useEffect, useState } from "react";
 import { Order, OrderStatus } from "@/types/types";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Separator } from "@radix-ui/react-separator";
+
 import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Separator } from "./ui/separator";
 
 type Props = {
   order: Order;
