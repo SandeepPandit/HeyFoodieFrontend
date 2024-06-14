@@ -1,4 +1,3 @@
-
 import { useSearchRestaurants } from "@/api/RestaurantApi";
 import SearchBar, { SearchForm } from "@/components/SearchBar";
 import { useState } from "react";

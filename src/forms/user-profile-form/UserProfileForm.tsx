@@ -54,11 +54,11 @@ const UserProfileForm = ({
         <Form {...form}>
             <form
                 onSubmit={form.handleSubmit(onSave)}
-                className="space-y-4 bg-gray-50 rounded-lg md:p-10"
+                className="space-y-4 bg-gray-100 rounded-lg md:p-10"
             >
                 <div>
-                    <h2 className="text-2xl font-bold">{title}</h2>
-                    <FormDescription>
+                    <h2 className="text-4xl font-bold ">{title}</h2>
+                    <FormDescription className="text-2xl">
                         View and change your profile information here
                     </FormDescription>
                 </div>
@@ -67,7 +67,7 @@ const UserProfileForm = ({
                     name="email"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Email</FormLabel>
+                            <FormLabel className="text-xl">Email</FormLabel>
                             <FormControl>
                                 <Input {...field} disabled className="bg-white" />
                             </FormControl>
@@ -80,7 +80,7 @@ const UserProfileForm = ({
                     name="name"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Name</FormLabel>
+                            <FormLabel className="text-xl">Name</FormLabel>
                             <FormControl>
                                 <Input {...field} className="bg-white" />
                             </FormControl>
@@ -95,7 +95,7 @@ const UserProfileForm = ({
                         name="addressLine"
                         render={({ field }) => (
                             <FormItem className="flex-1">
-                                <FormLabel>Address Line</FormLabel>
+                                <FormLabel className="text-xl">Address Line</FormLabel>
                                 <FormControl>
                                     <Input {...field} className="bg-white" />
                                 </FormControl>
@@ -108,7 +108,7 @@ const UserProfileForm = ({
                         name="city"
                         render={({ field }) => (
                             <FormItem className="flex-1">
-                                <FormLabel>City</FormLabel>
+                                <FormLabel className="text-xl">City</FormLabel>
                                 <FormControl>
                                     <Input {...field} className="bg-white" />
                                 </FormControl>
@@ -121,7 +121,7 @@ const UserProfileForm = ({
                         name="country"
                         render={({ field }) => (
                             <FormItem className="flex-1">
-                                <FormLabel>Country</FormLabel>
+                                <FormLabel className="text-xl">Country</FormLabel>
                                 <FormControl>
                                     <Input {...field} className="bg-white" />
                                 </FormControl>

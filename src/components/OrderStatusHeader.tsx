@@ -19,7 +19,7 @@ const OrderStatusHeader = ({ order }: Props) => {
 
     const paddedMinutes = minutes < 10 ? `0${minutes}` : minutes;
 
-    return `${hours}:${paddedMinutes}`;
+    return (hours > 12) ? `${hours - 12}:${paddedMinutes} pm` : `${hours}:${paddedMinutes} am`;
   };
 
   const getOrderStatusInfo = () => {
@@ -31,11 +31,11 @@ const OrderStatusHeader = ({ order }: Props) => {
   return (
     <>
       <h1 className="text-4xl font-bold tracking-tighter flex flex-col gap-5 md:flex-row md:justify-between font-poppins">
-        <span> Order Status: {getOrderStatusInfo().label}</span>
-        <span> Expected by: {getExpectedDelivery()}</span>
+        <span> <span className="text-purple-600">Order Status:</span> {getOrderStatusInfo().label}</span>
+        <span className="text-2xl"> <span className="text-red-600">Expected by:</span> {getExpectedDelivery()}</span>
       </h1>
       <Progress
-        className="animate-pulse"
+        className="animate-pulse border-2 border-gray-400 "
         value={getOrderStatusInfo().progressValue}
       />
     </>
