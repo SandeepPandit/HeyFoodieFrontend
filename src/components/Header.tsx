@@ -8,7 +8,7 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center">
         <Link
           to="/"
-          className="text-3xl font-bold tracking-tight text-purple-600"
+          className="text-3xl font-bold tracking-tight text-purple-600 font-poppins"
         >
           HeyFoodie
         </Link>

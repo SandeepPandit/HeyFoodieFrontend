@@ -54,7 +54,7 @@ const SearchBar = ({ onSubmit, onReset, placeHolder, searchQuery }: Props) => {
         <Search
           strokeWidth={2.5}
           size={30}
-          className="ml-1 text-purple-600 hidden md:block"
+          className="ml-1 text-purple-600 hidden md:block font-poppins"
         />
         <FormField
           control={form.control}
@@ -80,7 +80,7 @@ const SearchBar = ({ onSubmit, onReset, placeHolder, searchQuery }: Props) => {
         >
           Clear
         </Button>
-        <Button type="submit" className="rounded-full bg-purple-600">
+        <Button type="submit" className="rounded-full bg-purple-600 font-poppins">
           Search
         </Button>
       </form>

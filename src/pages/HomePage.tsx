@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import { ReactTyped } from "react-typed";
+import appDownloadImage from "../assets/appDownload.png"
 function HomePage() {
   const navigate = useNavigate();
   const handleSearchSubmit = (searchFormValues: SearchForm) => {
@@ -35,7 +36,7 @@ function HomePage() {
           </div>
         )}
       </TrackVisibility>
-      <div className="grid md:grid-cols-2 gap-5">
+      <div className="grid md:grid-cols-2 gap-10">
         <TrackVisibility>
           {({ isVisible }) => (
             <div className={isVisible ? "animate__animated animate__rubberBand" : ""}>
@@ -47,14 +48,16 @@ function HomePage() {
 
 
         <div className="flex flex-col items-center justify-center gap-4 text-center">
-          <span className="font-bold text-3xl tracking-tighter">
-            Order takeaway even faster!
+          <span className="font-bold text-3xl tracking-tighter font-poppins text-purple-600">
+            Get Your Meal Even Faster!
           </span>
-          <span>
+          <span className="font-poppins">
             Download the HeyFoodie App for faster ordering and personalised
             recommendations
           </span>
-          {/* <img src={appDownloadImage} /> */}
+          <div className="aspect-video h-20">
+            <img src={appDownloadImage} />
+          </div>
         </div>
       </div>
     </div>

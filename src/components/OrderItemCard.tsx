@@ -45,43 +45,43 @@ const OrderItemCard = ({ order }: Props) => {
     <Card>
       <CardHeader>
         <CardTitle className="grid md:grid-cols-4 gap-4 justify-between mb-3">
-          <div>
+          <div className="font-poppins">
             Customer Name:
-            <span className="ml-2 font-normal">
+            <span className="ml-2 font-normal font-poppins">
               {order.deliveryDetails.name}
             </span>
           </div>
-          <div>
+          <div className="font-poppins">
             Delivery address:
-            <span className="ml-2 font-normal">
+            <span className="ml-2 font-normal font-poppins">
               {order.deliveryDetails.addressLine1}, {order.deliveryDetails.city}
             </span>
           </div>
           <div>
             Time:
-            <span className="ml-2 font-normal">{getTime()}</span>
+            <span className="ml-2 font-normal font-poppins">{getTime()}</span>
           </div>
           <div>
             Total Cost:
-            <span className="ml-2 font-normal">
-              £{(order.totalAmount / 100).toFixed(2)}
+            <span className="ml-2 font-normal font-poppins">
+              ₹{(order.totalAmount / 100).toFixed(2)}
             </span>
           </div>
         </CardTitle>
         <Separator />
       </CardHeader>
       <CardContent className="flex flex-col gap-6">
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 font-poppins">
           {order.cartItems.map((cartItem) => (
             <span>
-              <Badge variant="outline" className="mr-2">
+              <Badge variant="outline" className="mr-2 font-poppins">
                 {cartItem.quantity}
               </Badge>
               {cartItem.name}
             </span>
           ))}
         </div>
-        <div className="flex flex-col space-y-1.5">
+        <div className="flex flex-col space-y-1.5 font-poppins">
           <Label htmlFor="status">What is the status of this order?</Label>
           <Select
             value={status}

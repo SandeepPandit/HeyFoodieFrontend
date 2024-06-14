@@ -25,12 +25,12 @@ const MobileNav = () => {
       <SheetContent className="space-y-3">
         <SheetTitle>
           {isAuthenticated ? (
-            <span className="flex items-center font-bold gap-2">
+            <span className="flex items-center font-bold gap-2 font-poppins">
               {f ? <img src={user?.picture} className="h-7 w-7 rounded-full" /> : <CircleUserRound className="text-purple-600" />}
               {user?.name || user?.email}
             </span>
           ) : (
-            <span> Welcome to HeyFoodie!</span>
+            <span className="font-poppins"> Welcome to HeyFoodie!</span>
           )}
         </SheetTitle>
         <Separator />
@@ -40,7 +40,7 @@ const MobileNav = () => {
           ) : (
             <Button
               onClick={() => loginWithRedirect()}
-              className="flex-1 font-bold bg-purple-600"
+              className="flex-1 font-bold bg-purple-600 font-poppins"
             >
               Log In
             </Button>

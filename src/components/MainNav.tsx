@@ -11,7 +11,7 @@ const MainNav = () => {
 
       {isAuthenticated ? (
         <>
-          <Link to="/order-status" className="font-bold hover:text-purple-600">
+          <Link to="/order-status" className="font-bold hover:text-purple-600 font-poppins">
             Order Status
           </Link>
           <UsernameMenu />
@@ -19,7 +19,7 @@ const MainNav = () => {
       ) : (
         <Button
           variant="ghost"
-          className="font-bold hover:text-purple-600 hover:bg-white"
+          className="font-bold hover:text-purple-600 hover:bg-white font-poppins"
           onClick={async () => await loginWithRedirect()}
         >
           Log In

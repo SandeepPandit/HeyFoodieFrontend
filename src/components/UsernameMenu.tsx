@@ -27,13 +27,13 @@ const UsernameMenu = () => {
         <DropdownMenuItem>
           <Link
             to="/manage-restaurant"
-            className="font-bold hover:text-purple-600"
+            className="font-bold hover:text-purple-600 font-poppins"
           >
             Manage Restaurant
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <Link to="/user-profile" className="font-bold hover:text-purple-600">
+          <Link to="/user-profile" className="font-bold hover:text-purple-600 font-poppins">
             User Profile
           </Link>
         </DropdownMenuItem>
@@ -41,7 +41,7 @@ const UsernameMenu = () => {
         <DropdownMenuItem>
           <Button
             onClick={() => logout()}
-            className="flex flex-1 font-bold bg-purple-600"
+            className="flex flex-1 font-bold bg-purple-600 font-poppins"
           >
             Log Out
           </Button>
