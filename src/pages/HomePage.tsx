@@ -18,16 +18,7 @@ function HomePage() {
 
   return (
     <div className="flex flex-col gap-12">
-      <div className="flex justify-center items-center pt-12 py-10">
-        <TrackVisibility>
-          {({ isVisible }) => (
-            <div className={isVisible ? "animate__animated animate__flip" : ""}>
 
-              <img src={foodie} className="max-h-80" />
-            </div>
-          )}
-        </TrackVisibility>
-      </div>
       <TrackVisibility>
         {({ isVisible }) => (
           <div className={isVisible ? "md:px-3 rounded-lg shadow-md py-8 flex flex-col gap-5 text-center bg-white border-2 border-purple-600 animate__animated animate__wobble" : "md:px-3 rounded-lg shadow-md py-8 flex flex-col gap-5 text-center bg-white border-2 border-purple-600"}>
@@ -59,6 +50,16 @@ function HomePage() {
 
 
         <div className="flex flex-col items-center justify-center gap-4 text-center">
+          <span className="flex justify-center items-center pt-12 py-10">
+            <TrackVisibility>
+              {({ isVisible }) => (
+                <div className={isVisible ? "animate__animated animate__flip" : ""}>
+
+                  <img src={foodie} className="max-h-80" />
+                </div>
+              )}
+            </TrackVisibility>
+          </span>
           <span className="font-bold text-3xl tracking-tighter font-poppins text-purple-600">
             Get Your Meal Even Faster!
           </span>

@@ -18,7 +18,7 @@ const TermsButton = () => {
             <DrawerTrigger>Terms and Conditions</DrawerTrigger>
             <DrawerContent>
                 <DrawerHeader>
-                    <DrawerTitle> Terms and Conditions By HeyFoodie
+                    <DrawerTitle className="text-red-600 text-2xl"> Terms and Conditions By HeyFoodie
                     </DrawerTitle>
                     <DrawerDescription>
                         <p>Welcome to HeyFoodie! These terms and conditions ("Terms") govern your use of our mobile application ("App") and services. By accessing or using the App, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use the App.</p>
@@ -60,7 +60,7 @@ const TermsButton = () => {
                 </DrawerHeader>
                 <DrawerFooter>
                     <DrawerClose>
-                        <Button variant="outline">Cancel</Button>
+                        <Button variant="outline" className="bg-purple-600 text-white">Close</Button>
                     </DrawerClose>
                 </DrawerFooter>
             </DrawerContent>

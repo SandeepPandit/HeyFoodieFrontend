@@ -18,7 +18,7 @@ const PrivacyButton = () => {
             <DrawerTrigger>Privacy Policy</DrawerTrigger>
             <DrawerContent>
                 <DrawerHeader>
-                    <DrawerTitle>Privacy Policy By HeyFoodie
+                    <DrawerTitle className="text-red-600 text-2xl">Privacy Policy By HeyFoodie
                     </DrawerTitle>
                     <DrawerDescription>
                         <p>HeyFoodie is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application ("App") and services. Please read this Privacy Policy carefully. If you do not agree with the terms of this Privacy Policy, please do not access the App.</p>
@@ -42,8 +42,7 @@ const PrivacyButton = () => {
                             <li>Communicate with you about your orders, promotions, and other related services.</li>
                             <li>Improve our App and services based on your usage patterns.</li>
                             <li>Personalize your experience by displaying content, products, and offers tailored to your preferences.</li>
-                            <li>Ensure the security of our App and prevent fraudulent activities.</li>
-                            <li>Comply with legal obligations.</li>
+
                         </ul>
 
                         <h2>3. How We Share Your Information</h2>
@@ -58,19 +57,18 @@ const PrivacyButton = () => {
                         <h2>4. Security of Your Information</h2>
                         <p>We use administrative, technical, and physical security measures to help protect your personal information. However, no method of transmission over the Internet or method of electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
 
-                        <h2>5. Your Choices</h2>
-                        <p>You can update or delete your personal information by accessing your account settings within the App. You can also opt-out of receiving promotional communications from us by following the unsubscribe instructions provided in those communications.</p>
 
-                        <h2>6. Children's Privacy</h2>
+
+                        <h2>5. Children's Privacy</h2>
                         <p>Our services are not intended for individuals under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have inadvertently received personal information from a child under 13, we will delete such information from our records.</p>
 
-                        <h2>7. Changes to This Privacy Policy</h2>
+                        <h2>6. Changes to This Privacy Policy</h2>
                         <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on the App. You are advised to review this Privacy Policy periodically for any changes.</p>
                     </DrawerDescription>
                 </DrawerHeader>
                 <DrawerFooter>
                     <DrawerClose>
-                        <Button variant="outline">Cancel</Button>
+                        <Button variant="outline" className="bg-purple-600 text-white">Close</Button>
                     </DrawerClose>
                 </DrawerFooter>
             </DrawerContent>
