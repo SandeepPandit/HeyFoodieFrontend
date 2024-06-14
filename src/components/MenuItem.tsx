@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { MenuItem as MenuItemType } from "@/types/types";
+import { MenuItem as MenuItemType } from "@/types";
 
 
 

@@ -1,7 +1,10 @@
-import landingImage from "../assets/landing.png";
-import appDownloadImage from "../assets/appDownload.png";
+
+import MobileApplicatoinImage from "../assets/MobileApplication.png";
 import SearchBar, { SearchForm } from "@/components/SearchBar";
 import { useNavigate } from "react-router-dom";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
+import { ReactTyped } from "react-typed";
 function HomePage() {
   const navigate = useNavigate();
   const handleSearchSubmit = (searchFormValues: SearchForm) => {
@@ -13,15 +16,36 @@ function HomePage() {
 
   return (
     <div className="flex flex-col gap-12">
-      <div className="md:px-32 bg-white rounded-lg shadow-md py-8 flex flex-col gap-5 text-center">
-        <h1 className="text-5xl font-bold tracking-tight text-orange-600">
-          Tuck into a takeway today
-        </h1>
-        <span className="text-xl"> Food is just a click away</span>
-        <SearchBar placeHolder="Search by City or Town" onSubmit={handleSearchSubmit} />
-      </div>
+      <TrackVisibility>
+        {({ isVisible }) => (
+          <div className={isVisible ? "md:px-3 rounded-lg shadow-md py-8 flex flex-col gap-5 text-center bg-white border-2 border-purple-600 animate__animated animate__wobble" : "md:px-3 rounded-lg shadow-md py-8 flex flex-col gap-5 text-center bg-white border-2 border-purple-600"}>
+            <h1 className="text-5xl font-bold tracking-tight text-purple-600 animate-bounce">
+              HUNGRY!!! Order Now
+            </h1>
+            <span>
+              <ReactTyped
+                className="text-4xl"
+                strings={["Your Favourite", "Delicious Meals", "Are Just A", "Click Away!"]}
+                typeSpeed={40}
+                backSpeed={50}
+                loop={true}
+              />
+            </span>
+            <SearchBar placeHolder="Search By City" onSubmit={handleSearchSubmit} />
+          </div>
+        )}
+      </TrackVisibility>
       <div className="grid md:grid-cols-2 gap-5">
-        <img src={landingImage} />
+        <TrackVisibility>
+          {({ isVisible }) => (
+            <div className={isVisible ? "animate__animated animate__rubberBand" : ""}>
+
+              <img src={MobileApplicatoinImage} />
+            </div>
+          )}
+        </TrackVisibility>
+
+
         <div className="flex flex-col items-center justify-center gap-4 text-center">
           <span className="font-bold text-3xl tracking-tighter">
             Order takeaway even faster!
@@ -30,7 +54,7 @@ function HomePage() {
             Download the HeyFoodie App for faster ordering and personalised
             recommendations
           </span>
-          <img src={appDownloadImage} />
+          {/* <img src={appDownloadImage} /> */}
         </div>
       </div>
     </div>

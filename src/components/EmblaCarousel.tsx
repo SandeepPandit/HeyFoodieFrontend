@@ -1,44 +1,68 @@
-import React from 'react'
-import { EmblaOptionsType } from 'embla-carousel'
+import React, { useCallback } from 'react'
+import { EmblaOptionsType, EmblaCarouselType } from 'embla-carousel'
 import { DotButton, useDotButton } from './EmblaCarouselDotButton'
 import {
     PrevButton,
     NextButton,
     usePrevNextButtons
 } from './EmblaCarouselArrowButtons'
+import Autoplay from 'embla-carousel-autoplay'
 import useEmblaCarousel from 'embla-carousel-react'
-import hero from "../assets/hero.png";
+import pizza from "../assets/Pizza.jpeg";
+import momos from "../assets/Momos.jpeg";
+import noodles from "../assets/Noodles.jpeg";
+import samosa from "../assets/Samosa.jpeg";
+
 
 
 type PropType = {
-    slides: number[]
     options?: EmblaOptionsType
 }
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-    const { slides, options } = props
-    const [emblaRef, emblaApi] = useEmblaCarousel(options)
+    const { options } = props
+    const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()])
 
-    const { selectedIndex, scrollSnaps, onDotButtonClick } =
-        useDotButton(emblaApi)
+    const onNavButtonClick = useCallback((emblaApi: EmblaCarouselType) => {
+        const autoplay = emblaApi?.plugins()?.autoplay
+        if (!autoplay) return
+
+        const resetOrStop =
+            autoplay.options.stopOnInteraction === false
+                ? autoplay.reset
+                : autoplay.stop
+
+        resetOrStop()
+    }, [])
+
+    const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(
+        emblaApi,
+        onNavButtonClick
+    )
 
     const {
         prevBtnDisabled,
         nextBtnDisabled,
         onPrevButtonClick,
         onNextButtonClick
-    } = usePrevNextButtons(emblaApi)
+    } = usePrevNextButtons(emblaApi, onNavButtonClick)
 
     return (
-
-        <div className="embla">
+        <section className="embla">
             <div className="embla__viewport" ref={emblaRef}>
                 <div className="embla__container">
-                    {slides.map((index) => (
-                        <div className="embla__slide" key={index}>
-                            <div className="embla__slide__number"> <img src={hero} /></div>
-                        </div>
-                    ))}
+                    < div className="embla__slide" >
+                        <div className="embla__slide__number"> <img src={pizza} className="aspect-video" /></div>
+                    </div >
+                    <div className="embla__slide" >
+                        <div className="embla__slide__number"> <img src={noodles} className="aspect-video" /></div>
+                    </div>
+                    <div className="embla__slide" >
+                        <div className="embla__slide__number"> <img src={samosa} className="aspect-video" /></div>
+                    </div>
+                    <div className="embla__slide" >
+                        <div className="embla__slide__number"> <img src={momos} className="aspect-video" /></div>
+                    </div>
                 </div>
             </div>
 
@@ -60,9 +84,19 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                     ))}
                 </div>
             </div>
-        </div>
-
+        </section>
     )
 }
 
 export default EmblaCarousel
+
+
+
+
+
+
+
+
+
+
+

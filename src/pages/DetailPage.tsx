@@ -4,7 +4,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Card, CardFooter } from "@/components/ui/card";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { MenuItem as MenuItemType } from "../types/types";
+import { MenuItem as MenuItemType } from "../types";
 import RestaurantInfo from "@/components/RestaurantInfo";
 import OrderSummary from "../components/OrderSummary";
 import MenuItem from "../components/MenuItem";

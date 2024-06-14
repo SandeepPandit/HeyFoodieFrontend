@@ -1,4 +1,4 @@
-import { Restaurant } from "@/types/types";
+import { Restaurant } from "@/types";
 import { Link } from "react-router-dom";
 
 import { Banknote, Clock, Dot } from "lucide-react";

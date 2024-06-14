@@ -1,4 +1,4 @@
-import { OrderStatus } from "@/types/types";
+import { OrderStatus } from "@/types";
 
 type OrderStatusInfo = {
   label: string;

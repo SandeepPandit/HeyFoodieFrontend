@@ -2,7 +2,7 @@ import { CartItem } from "@/pages/DetailPage";
 import { Badge } from "@/components/ui/badge";
 import { CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Restaurant } from "@/types/types";
+import { Restaurant } from "@/types";
 
 import { Trash } from "lucide-react";
 

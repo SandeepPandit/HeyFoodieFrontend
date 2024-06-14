@@ -1,4 +1,4 @@
-import { Order } from "@/types/types";
+import { Order } from "@/types";
 import { ORDER_STATUS } from "@/config/order-status-config";
 import { Progress } from "@/components/ui/progress";
 
