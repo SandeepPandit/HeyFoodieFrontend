@@ -23,7 +23,7 @@ function HomePage() {
             <h1 className="text-5xl font-bold tracking-tight text-purple-600 animate-bounce">
               HUNGRY!!! Order Now
             </h1>
-            <span>
+            <span className="text-red-600">
               <ReactTyped
                 className="text-4xl"
                 strings={["Your Favourite", "Delicious Meals", "Are Just A", "Click Away!"]}
