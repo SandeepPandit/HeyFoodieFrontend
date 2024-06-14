@@ -6,6 +6,7 @@ import "animate.css";
 import TrackVisibility from "react-on-screen";
 import { ReactTyped } from "react-typed";
 import appDownloadImage from "../assets/appDownload.png"
+import foodie from "../assets/Foodie.png"
 function HomePage() {
   const navigate = useNavigate();
   const handleSearchSubmit = (searchFormValues: SearchForm) => {
@@ -17,6 +18,16 @@ function HomePage() {
 
   return (
     <div className="flex flex-col gap-12">
+      <div className="flex justify-center items-center pt-12 py-10">
+        <TrackVisibility>
+          {({ isVisible }) => (
+            <div className={isVisible ? "animate__animated animate__flip" : ""}>
+
+              <img src={foodie} className="max-h-80" />
+            </div>
+          )}
+        </TrackVisibility>
+      </div>
       <TrackVisibility>
         {({ isVisible }) => (
           <div className={isVisible ? "md:px-3 rounded-lg shadow-md py-8 flex flex-col gap-5 text-center bg-white border-2 border-purple-600 animate__animated animate__wobble" : "md:px-3 rounded-lg shadow-md py-8 flex flex-col gap-5 text-center bg-white border-2 border-purple-600"}>
@@ -41,7 +52,7 @@ function HomePage() {
           {({ isVisible }) => (
             <div className={isVisible ? "animate__animated animate__rubberBand" : ""}>
 
-              <img src={MobileApplicatoinImage} />
+              <img src={MobileApplicatoinImage} className="h-90" />
             </div>
           )}
         </TrackVisibility>
