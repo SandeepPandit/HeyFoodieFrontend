@@ -12,12 +12,12 @@ const Footer = () => {
 
 
 
-        <span className="text-white font-bold tracking-tight flex flex-row gap-4 font-poppins">Privacy Policy</span>
-        <span className="text-white font-bold tracking-tight flex flex-row gap-4 font-poppins">Terms of Service</span>
+        <span className="text-white font-bold tracking-tight flex flex-row gap-4 font-poppins text-xl">Privacy Policy</span>
+        <span className="text-white font-bold tracking-tight flex flex-row gap-4 font-poppins text-xl">Terms of Service</span>
 
-        <span className="text-white font-bold tracking-tight flex flex-row gap-4 font-poppins">
+        <span className="text-white font-bold tracking-tight flex flex-row gap-4 font-poppins text-xl">
           <span><FaFacebook /></span>
-          <LuInstagram />
+          <span><LuInstagram /></span>
 
           <span><FaLinkedin /></span>
         </span>
