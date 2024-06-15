@@ -1,4 +1,3 @@
-
 import MobileApplicatoinImage from "../assets/MobileApplication.png";
 import SearchBar, { SearchForm } from "@/components/SearchBar";
 import { useNavigate } from "react-router-dom";
