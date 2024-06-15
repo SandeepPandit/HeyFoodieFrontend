@@ -48,20 +48,20 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     } = usePrevNextButtons(emblaApi, onNavButtonClick)
 
     return (
-        <section className="embla">
+        <section className="embla ">
             <div className="embla__viewport" ref={emblaRef}>
                 <div className="embla__container">
                     < div className="embla__slide" >
-                        <div className="embla__slide__number"> <img src={pizza} className="aspect-video" /></div>
+                        <img src={pizza} className="aspect-video embala__slide__number border-2 border-purple-600" />
                     </div >
                     <div className="embla__slide" >
-                        <div className="embla__slide__number"> <img src={noodles} className="aspect-video" /></div>
+                        <img src={noodles} className="aspect-video embala__slide__number border-2 border-purple-600" />
                     </div>
                     <div className="embla__slide" >
-                        <div className="embla__slide__number"> <img src={samosa} className="aspect-video" /></div>
+                        <img src={samosa} className="aspect-video embala__slide__number border-2 border-purple-600" />
                     </div>
                     <div className="embla__slide" >
-                        <div className="embla__slide__number"> <img src={momos} className="aspect-video" /></div>
+                        <img src={momos} className="aspect-video embala__slide__number border-2 border-purple-600" />
                     </div>
                 </div>
             </div>

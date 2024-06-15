@@ -74,6 +74,7 @@ module.exports = {
       },
       fontFamily: {
         poppins: ['"Poppins"', ...defaultTheme.fontFamily.sans],
+        Playwrite: ['"Playwrite"', ...defaultTheme.fontFamily.sans],
       },
     },
   },
